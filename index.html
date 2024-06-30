@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Management System</title>
+    <style>
+        body {
+            background-color: #022e39;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            background-color: #c0424e;
+            font-size: 60px;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        li {
+            margin: 20px 0;
+            font-size: 30px;
+        }
+        li a {
+            color: #c0424e;
+            text-decoration: none;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Employee Management System</h1>
+    <ul>
+        <li><a href="{{ url_for('add_employee') }}">Add Employee</a></li>
+        <li><a href="{{ url_for('remove_employee') }}">Remove Employee</a></li>
+        <li><a href="{{ url_for('promote_employee') }}">Promote Employee</a></li>
+        <li><a href="{{ url_for('display_employee') }}">Display Employees</a></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promote Employee</title>
+    <style>
+        body {
+            background-color: #022e39;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #c0424e;
+        }
+        form {
+            display: inline-block;
+            margin-top: 20px;
+            text-align: left;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+        input {
+            padding: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #c0424e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #a9383c;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Promote Employee</h1>
+    <form method="POST">
+        <label for="id">Employee Id:</label>
+        <input type="text" id="id" name="id" required><br>
+        <label for="amount">Increase in Salary:</label>
+        <input type="text" id="amount" name="amount" required><br>
+        <button type="submit">Promote Employee</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+    <style>
+        body {
+            background-color: #022e39;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #c0424e;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #033d4b;
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            width: 60%;
+            text-align: left;
+        }
+        strong {
+            color: #c0424e;
+        }
+        hr {
+            border: 0;
+            border-top: 1px solid #c0424e;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <ul>
+        {% for employee in employees %}
+        <li>
+            <strong>Employee Id:</strong> {{ employee[0] }}<br>
+            <strong>Employee Name:</strong> {{ employee[1] }}<br>
+            <strong>Employee Post:</strong> {{ employee[2] }}<br>
+            <strong>Employee Salary:</strong> {{ employee[3] }}<br>
+            <hr>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>
